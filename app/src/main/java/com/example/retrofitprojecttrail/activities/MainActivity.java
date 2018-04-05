@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements viewRecyclerInter
     private LayoutManager layoutManager;
     private RecyclerAdaptor recyclerAdaptor;
     private List<User> users;
+    int x;
     private ApiUserInterface apiUserInterface;
   //  ListView listView;
     presenterInt presenterIntObj;
