@@ -15,6 +15,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static android.support.v7.widget.RecyclerView.*;
 
 
@@ -58,18 +61,26 @@ public class RecyclerAdaptor extends RecyclerView.Adapter<RecyclerAdaptor.MyView
 
     public class MyViewHolder extends ViewHolder
     {
-        TextView name,realname,team,firstapperance,createdby,publisher,bio;
-        ImageView imageurl;
+       @BindView(R.id.name) TextView name;
+       @BindView(R.id.realname)TextView realname;
+       @BindView(R.id.team)TextView team;
+       @BindView(R.id.firstappearance)TextView firstapperance;
+       @BindView(R.id.createdby)TextView createdby;
+       @BindView(R.id.publisher)TextView publisher;
+       @BindView(R.id.imageurl) ImageView imageurl;
+       @BindView(R.id.bio) TextView bio;
         public MyViewHolder(View itemView) {
             super(itemView);
-            name=(TextView)itemView.findViewById(R.id.name);
-            realname=(TextView)itemView.findViewById(R.id.realname);
-            team=(TextView)itemView.findViewById(R.id.team);
-            firstapperance=(TextView)itemView.findViewById(R.id.firstappearance);
-            createdby=(TextView)itemView.findViewById(R.id.createdby);
-            publisher=(TextView)itemView.findViewById(R.id.publisher);
-            imageurl=(ImageView) itemView.findViewById(R.id.imageurl);
-            bio=(TextView)itemView.findViewById(R.id.bio);
+//            name=(TextView)itemView.findViewById(R.id.name);
+//            realname=(TextView)itemView.findViewById(R.id.realname);
+//            team=(TextView)itemView.findViewById(R.id.team);
+//            firstapperance=(TextView)itemView.findViewById(R.id.firstappearance);
+//            createdby=(TextView)itemView.findViewById(R.id.createdby);
+//            publisher=(TextView)itemView.findViewById(R.id.publisher);
+//            imageurl=(ImageView) itemView.findViewById(R.id.imageurl);
+//            bio=(TextView)itemView.findViewById(R.id.bio);
+            ButterKnife.bind(this,itemView);
+
         }
     }
 }
